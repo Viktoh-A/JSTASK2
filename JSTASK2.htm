@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS TASK 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+    
+    <script>
+    console.log("ready to go")
+    let d1 = {principal:2500, time:1.8};
+    let d2 = {principal:1000, time:5};
+    let d3 = {principal:3000, time:1};
+    let d4 = {principal:2000, time:3};
+
+    let data = [d1,d2,d3,d4];
+
+    const interestCalculator = (e) =>{
+        if (e.principal >= 2500 || (e.time>1&&e.time<3)) {
+            let rate = 3;
+            
+        }
+        else if (e.principal >= 2500 && (e.time>=3)) {
+            let rate = 4;
+            
+        }
+        else if (e.principal < 2500 || (e.time<=1)) {
+            let rate = 2;
+            
+        }
+        else{
+            let rate = 1;
+            
+        }
+        data[0].rate = 3;
+        data[1].rate = 2;
+        data[2].rate = 3;
+        data[3].rate = 2;
+
+        data[0].interest = (2500*3*1.8)/100;
+        data[1].interest = (1000*2*5)/100;
+        data[2].interest = (3000*3*1)/100;
+        data[3].interest = (2000*2*3)/100;
+
+        let interestData = [data[0],data[1],data[2],data[3]];
+        console.log(interestData);
+
+        return 0;
+
+    }
+
+interestCalculator(data[0])
+    
+   
+    </script>
+</body>
+</html>
